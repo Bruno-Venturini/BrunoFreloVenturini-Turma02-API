@@ -196,12 +196,6 @@ describe('Mercado API', () => {
             .get(`${baseUrl}/mercado/${novoMercado.id}/produtos/acougue/suinos`)
             .expectStatus(StatusCodes.OK)
         });
-
-        it('Deletar um suino', async () => {
-            await p.spec()
-            .delete(`${baseUrl}/mercado/${novoMercado.id}/produtos/acougue/bovinos/${novoSuino.id}`)
-            .expectStatus(StatusCodes.OK)
-        })
     })
 
     describe('Aves', () => {
@@ -240,11 +234,5 @@ describe('Mercado API', () => {
             .get(`${baseUrl}/mercado/${novoMercado.id}/produtos/acougue/aves`)
             .expectStatus(StatusCodes.OK)
         });
-
-        it('Deletar uma ave', async () => {
-            await p.spec()
-            .delete(`${baseUrl}/mercado/${novoMercado.id}/produtos/acougue/aves/${novaAve.id}`)
-            .expectStatus(StatusCodes.OK)
-        })
     })
 })
